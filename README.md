@@ -1,4 +1,4 @@
-# cdc-empty-java
+# CDK Base Java
 Template for CDK Java repositories
 
 ## Development container (Codespaces)
