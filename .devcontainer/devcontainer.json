@@ -1,19 +1,25 @@
 {
-  "name": "cdc-empty-java",
-  "image": "mcr.microsoft.com/devcontainers/java:1-21-bookworm",
+  "name": "cdk-java-tdd",
+  "image": "mcr.microsoft.com/devcontainers/java:21-bookworm",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
-      "version": "lts"
+      "version": "22"
     },
     "ghcr.io/devcontainers/features/aws-cli:1": {}
   },
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y jq tree unzip zip && npm install -g aws-cdk",
   "customizations": {
     "vscode": {
+      "settings": {
+        "java.configuration.updateBuildConfiguration": "automatic",
+        "java.import.maven.enabled": true
+      },
       "extensions": [
+        "redhat.java",
         "vscjava.vscode-java-pack",
-        "amazonwebservices.aws-toolkit-vscode"
+        "AmazonWebServices.aws-toolkit-vscode"
       ]
     }
-  }
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "remoteUser": "vscode"
 }
