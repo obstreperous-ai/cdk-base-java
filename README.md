@@ -1,25 +1,18 @@
-# CDK Base Java
-Template for CDK Java repositories
+# Welcome to your CDK Java project!
 
-## Development container (Codespaces)
+This is a blank project for CDK development with Java.
 
-This repository includes a devcontainer for Java/CDK development.
+The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
-### Included tooling
+It is a [Maven](https://maven.apache.org/) based project, so you can open this project with any Maven compatible Java IDE to build and run tests.
 
-- Java 21
-- Node.js LTS and npm
-- AWS CLI v2
-- AWS CDK CLI (`cdk`)
-- Common command-line utilities (`git`, `curl`, `wget`, `jq`, `unzip`, `zip`, `tree`)
+## Useful commands
 
-### Use it
+ * `mvn package`     compile and run tests
+ * `cdk ls`          list all stacks in the app
+ * `cdk synth`       emits the synthesized CloudFormation template
+ * `cdk deploy`      deploy this stack to your default AWS account/region
+ * `cdk diff`        compare deployed stack with current state
+ * `cdk docs`        open CDK documentation
 
-1. Open the repository in a GitHub Codespace (or VS Code Dev Containers).
-2. Let the container build and run the post-create setup.
-3. Verify tool installation:
-   - `java --version`
-   - `node --version`
-   - `npm --version`
-   - `aws --version`
-   - `cdk --version`
+Enjoy!
